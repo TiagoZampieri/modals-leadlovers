@@ -41,7 +41,7 @@ style="top: 0px; height: 100vh;"
     </div>
 
     <div class="tm-modal-actions">
-      <button class="tm-outline-button">
+      <button id="tm-close" class="tm-outline-button">
         ENTENDI
       </button>
       <button class="tm-button-accent">
@@ -98,5 +98,6 @@ style="top: 0px; height: 100vh;"
   }
 
 </style>
-</div> `); $('.telemetry-modal-overlay, .telemetry-modal-link').on('click', function() { $('.telemetry-modal').remove();
-});
+</div> `); 
+$('.telemetry-modal-overlay, .telemetry-modal-link').on('click', () => $('.telemetry-modal').remove());
+$('#tm-close').on('click',  () => $('.telemetry-modal').remove());
